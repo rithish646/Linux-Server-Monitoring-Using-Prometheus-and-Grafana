@@ -1,0 +1,6 @@
+[Unit]
+Description=Package Updates Count Exporter
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/updates_check.sh
