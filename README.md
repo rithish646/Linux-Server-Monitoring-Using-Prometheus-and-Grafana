@@ -10,18 +10,18 @@ The following files are included (all stored in the main branch):
 
 | File Name                 | Purpose                                              |
 | ------------------------- | ---------------------------------------------------- |
-| **node_exporter.service** | Systemd service to run Prometheus Node Exporter      |
-| **updates_check.sh**      | Script that checks number of pending package updates |
-| **updates_check.service** | Systemd service that executes updates_check.sh       |
-| **updates_check.timer**   | Timer that schedules update checks every 30 minutes  |
+| node_exporter.service     | Systemd service to run Prometheus Node Exporter      |
+| updates_check.sh          | Script that checks number of pending package updates |
+| updates_check.service     | Systemd service that executes updates_check.sh       |
+| updates_check.timer       | Timer that schedules update checks every 30 minutes  |
 
 
 These four files together enable:
 
-✔ Node Exporter running as a systemd service
-✔ Automatic update count generation
-✔ Integration with Prometheus via textfile collector
-✔ Grafana dashboard visualization
+Node Exporter running as a systemd service
+Automatic update count generation
+Integration with Prometheus via textfile collector
+Grafana dashboard visualization
 
 1. node_exporter.service
 
@@ -148,9 +148,10 @@ Gauge
 Thresholds:
 Value	Color
 0	Green
-1–5	Yellow
->5	Red
-🏁 Summary
+10-20	Yellow
+>20	Red
+
+Summary
 
 This repository provides:
 
